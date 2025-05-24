@@ -314,7 +314,7 @@ Frequently searched questions related to Android ROM development:
 - How to check if a firmware package supports dynamic partitions?
 
 🔹 **Kernel Tweaking & Device Tree Configuration**
-- How to extract and modify a device tree blob (DTB)?
+- How to extract and modify a device tree blob (DTB) or extract vendor blobs?
 - What tools can I use to unpack and repack boot.img?
 - How to add custom kernel features to an Android ROM?
 - How to patch a kernel for a specific device?
