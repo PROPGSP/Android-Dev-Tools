@@ -1,128 +1,113 @@
-🔧 Android Dev Tools 🔧
-
-A collection of powerful tools for made to init the Android ROM development and customization.
-
-Im an Beginner in Android Rom Development.
-
-I just uploaded the tools that i meet in my learning journey to make sure its easily reachable to new learners.
 
 
-📁 Get the files from releases [https://github.com/PROPGSP/Android-Dev-Tools/releases/tag/release]
+# 🔧 Android Dev Tools  
+🚀 **A collection of powerful tools designed to kickstart Android ROM development and customization.** 🚀  
 
-An Advice:
-Striclty use linux for all the process for rom development.
-Never use wsl because it has too many limitations.
-Bare metal linux is the best choice.
-If you cant install an linux or hire an linux vm, in this case use Oracle Virtual Box [https://www.virtualbox.org/]. This option is far more better than using wsl. But you will get very slow build that can take time from several hours to days. 
-Check out the minimum requirements [https://source.android.com/docs/setup/start/requirements]
+**🔹 Beginner-friendly** – As a learner in Android ROM development, I've gathered tools along my journey to make them easily accessible for new developers.
 
-🛠️ Usage :
-You can find the apropriate tool's readme.md which will have an detailed use cases.
-Well this below is a very very short overview of use cases of tools for nerds.
-Please read the readme.md file inside each tool folder to get better understanding if you are an beginner.
+📁 **Get the Files from Releases:**  
+[🔗 Android Dev Tools Release](https://github.com/PROPGSP/Android-Dev-Tools/releases/tag/release)  
 
-If you have OTA update firmware package with payload.bin :
+---
 
-Use payload dumper go inside the folder payload.bin-unpackor.
-1) Set the permission to the tool:
-```
+## 🛠️ Important Advice  
+✔️ **Strictly use Linux** – It's essential for ROM development.  
+❌ **Avoid WSL** – Too many limitations for this process.  
+💻 **Bare-metal Linux is best** – If you can't install Linux natively, use a **Linux VM**.  
+🛠️ **Oracle VirtualBox is a better alternative** to WSL, but expect slower builds (several hours to days).  
+📌 **Check out minimum system requirements:**  
+[🔗 Android Build Requirements](https://source.android.com/docs/setup/start/requirements)  
+
+---
+
+## 🛠️ Usage Overview  
+Each tool contains a **README.md** inside its respective folder with **detailed usage instructions**.  
+Below is a **quick overview** for advanced users who prefer a **fast reference**.  
+
+---
+
+## 📦 Extracting OTA Firmware (payload.bin)  
+If you have an **OTA update** containing `payload.bin`, use **payload-dumper-go** inside `payload.bin-unpackor`:
+
+1️⃣ **Set execution permissions:**  
+```bash
 chmod +x payload-dumper-go 
 ```
-2) Add payload-dumper-go . replace the /path/to/payload-dumper-go with appropriate path
-```
+2️⃣ **Add the tool to your PATH:**  
+```bash
 export PATH=$PATH:/path/to/payload-dumper-go
 ```
-3) unpack payload.bin
-```
+3️⃣ **Extract `payload.bin`:**  
+```bash
 payload-dumper-go /path/to/payload.bin
 ```
-Now you have unpacked the payload.bin . 
-You may see files like this boot, dtbo, gcf, gsa, gsa_bll, init_boot, Idfw, modem, pbl, product, pvmfw, system, system_dlkm, system_ext, tzsw, vbmeta, vbmeta_system, vbmeta_vendor, vendor, vendor_ boot ,vendor_dlkm, vendor_kernel_boot images.
-Not all payload have all this above images. It varies for different phones and models and brands.
-Now skip the below step to unpack sparse image.
+🚀 You now have unpacked images (`boot`, `dtbo`, `system`, `vendor`, etc.).  
+⚠️ Not all payloads contain the same images – it depends on the device brand/model.
 
+---
 
-If you dont have OTA payload.bin Instead you have some images and some sparsechunks .
-![image](https://github.com/user-attachments/assets/e927faec-a74d-47e6-b863-3e4fd7f99b71)
+## 📦 Extracting Sparse Images (`super.img`)  
+If you **don't have payload.bin** but instead have **sparse chunks**, follow these steps:
 
-Then you can unpack the super.img from the sparse chunks and then unpack the super.img into its partitions and then mount or unpack the erofs images
-
-use the simg2imgtool inside this folder super.img-extractor:
-replace "system.img_sparsechunk.*" with your appropriate sparsechunk names
-```
+### 1️⃣ Convert Sparse Images to `super.img`  
+Inside `super.img-extractor`, run:  
+```bash
 ./simg2img system.img_sparsechunk.* super.img
 ```
 
-use lpunpack to unpack the super.img into its partitions
-```
+### 2️⃣ Unpack `super.img` into partitions  
+```bash
 ./lpunpack super.img /super_unpacked
 ```
-now inside the super_unpacked folder you will get the android partitons images like system , vendor or system_a , system_b , vendor_a ,vendor_b images 
-
-In some cases it will give some error like vendor_b not found or system_b not found.
-This happens because the firmware file doesnt have such partitions. If you know about slot A/B then you will understand.
-
-To fix just touch to create an dump file with that name inside the /super_unpacked folder
-```
+✔️ You will get `system`, `vendor`, `system_a`, `system_b`, `vendor_a`, `vendor_b` images.  
+⚠️ If an error occurs (`vendor_b.img not found`), create an empty file to bypass:  
+```bash
 mkdir super_unpacked; cd super_unpacked; touch vendor_b.img
 ```
-Replace the vendor_b,img with the appropriate name that you got in the error message.
+Now you have **all images extracted** from the firmware.
 
-now will get the unpacked images inside the super_unpacked folder.
+---
 
-
-Now you all have the all img files of firmware unpacked into .img file format.
-
-If you want to unpack kernel, device tree blobs, prop files, partitions data and more:
-Now use Android_boot_editor indise the folder image-unpack-repack.
-The Android_boot_editor probably the best for unpacking and repacking boot.img , venndor.img ,system.img
-
-before using Android_boot_editor run 
-```
+## 🛠️ Extracting Device Tree, Kernel, and Other Files  
+### 📌 Using **Android_boot_editor** (inside `image-unpack-repack`)
+Before extracting, **check file formats**:  
+```bash
 file *.img
 ```
-To get the format of files .
 
-If you see erofs files then skip the below step to erofs unpacking.
-copy the img file you want to extract into the image-unpack-repack folder and then run
-```
+✔️ If **Erofs format**, use:  
+```bash
 ./erofsUnpackRust_x64linux system_a.img
 ```
-you will get the unpacked files. or probably you just mount if you are in bare metal linux.
-
-you can use binwalk to search and unpack those files.
+🚀 You now have unpacked files!  
+Alternatively, **use Binwalk for deep extraction**:  
+```bash
+binwalk -Me name.img
 ```
-binwalk -Me  name.img
+🚀 Extracted data is stored inside auto-generated folders.
+
+✔️ If you want to analyze an image without extracting:  
+```bash
+binwalk -Me -r name.img
 ```
-you will get the extracted files inside the the folder like extracted_2389235.
-if you want you can specify the output directory also. but this is and very short overview so you guys refer readme inside the image-unpack-repack
 
-In case you need to examine what the other .img files have but no need extract, just use 
-```binwalk -Me -r name.img```
-You will see the list of files in it.
-
-the kernel and device tree blob might be located in different partittions for different model and brand phones.
-the correct use of binwalk will get you extract those files.
-
-If you cant find those with binwalk 
-
-```
+⚠️ If the **device tree & kernel files** aren't inside standard partitions, **try:**  
+```bash
 ./gradlew unpack
 ```
-now you will get the unpacked files inside /image-unpack-repack/build/ folder
-after extracting each img files delete that img file and clear the build folder to avoid any problems.
-Android_boot_editor has only limited and enough file format support to unpack and repack . but this supported files formats are enought for our rom development process.
+✔️ You’ll find extracted files inside `image-unpack-repack/build/`.  
+📌 **After extracting each `.img` file, clear the build folder** to prevent issues.
 
+---
 
+## 📜 License  
+📌 This project is a **collection of open-source tools**.  
+Each tool contains its **own respective license file**.
 
+---
 
-📜 License
+## 🏆 Credits  
+🙏 **Thanks to the amazing developers** who created these tools!  
 
-This project is is just an collections of tools. Each tool in this project has the Liscense copy of it.
+---
 
-
-🏆 Credits
-
-
-
-Thank You To Developer for making these Tools
