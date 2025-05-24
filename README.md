@@ -29,20 +29,10 @@
 ## 🏆 **A Kind Request to Expert Android ROM Developers**  
 
 🙏 **Calling all experienced Android ROM developers!**  
-As a beginner in **Android ROM development**, I have collected some tools to make learning easier. But I know that there are **many more powerful tools** that experts like you use daily.  
+As a beginner in **Android ROM development**, I have collected some tools to make learning journey easier. But I know that there are **many more powerful tools** that experts like you use daily.  
 
 📢 **If you know any must-have tools that simplify ROM development, firmware extraction, kernel tweaking, or device tree modifications, kindly share them!**  
 Your knowledge can help **new developers** kickstart their journey more efficiently.  
-
----
-
-## 🚀 **Existing Tools in This Repository**  
-| 🔹 **Tool** | 🏷️ **Developer** | 🔗 **Repository** |
-|------------|-----------------|------------------|
-| **Binwalk** | @ReFirmLabs | [🔗 GitHub Repo](https://github.com/ReFirmLabs/binwalk) |
-| **DTC (Device Tree Compiler)** | @dgibson | [🔗 GitHub Repo](https://github.com/dgibson/dtc) |
-| **Payload Dumper Go** | @ssut | [🔗 GitHub Repo](https://github.com/ssut/payload-dumper-go) |
-| **Android Boot Image Editor** | @cfig | [🔗 GitHub Repo](https://github.com/cfig/Android_boot_image_editor) |
 
 ---
 
