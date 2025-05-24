@@ -285,53 +285,152 @@ I've incorporated the **credits section** into your README with proper formattin
 
 
 
+
+
+
+
 <!-- 
-Frequently searched questions related to Android ROM development:
+🔍 Frequently Searched Questions – SEO Optimized for GitHub & Google 🚀  
 
-🔹 **Firmware Extraction & Partition Handling**
-- How to extract vendor blobs from Android firmware?
-- How to unpack kernel images from boot.img?
-- How to extract DTB (Device Tree Blob) from Android firmware?
-- How to extract ramdisk from an Android boot.img?
-- How to unpack system and vendor partitions from super.img?
-- Best tools for extracting Android firmware partitions?
-- How to repack boot.img after modification?
-- How to convert sparse images to raw format?
-- How to modify and repackage vendor_boot.img?
-- What is payload.bin, and how to unpack it?
-- How to extract proprietary binaries from an Android update package?
-- How to fix errors while unpacking dynamic partitions?
+🛠️ **Firmware Extraction & Partition Handling**  
+1️⃣ How to extract vendor blobs from Android firmware?  
+2️⃣ How to unpack kernel images from boot.img?  
+3️⃣ How to extract DTB (Device Tree Blob) from Android boot.img?  
+4️⃣ How to extract ramdisk from an Android boot.img?  
+5️⃣ How to unpack system and vendor partitions from super.img?  
+6️⃣ Best tools for extracting Android firmware partitions?  
+7️⃣ How to repack boot.img after modification?  
+8️⃣ How to convert sparse images to raw format?  
+9️⃣ How to modify and repackage vendor_boot.img?  
+🔟 What is payload.bin, and how to unpack it?  
+1️⃣1️⃣ How to extract proprietary binaries from an Android update package?  
+1️⃣2️⃣ How to fix errors while unpacking dynamic partitions?  
 
-🔹 **Android ROM Development & Customization**
-- How to build a custom Android ROM from scratch?
-- How to apply patches and modifications to AOSP?
-- What are the essential tools for ROM customization?
-- How do I add GApps to a custom ROM?
-- How to decompile and edit system APKs?
-- How do I extract and modify bootloader images?
-- How to integrate vendor blobs into custom ROM development?
-- What is the difference between slot A and slot B in Android firmware?
-- How to check if a firmware package supports dynamic partitions?
+🔧 **Android ROM Development & Customization**  
+1️⃣3️⃣ How to build a custom Android ROM from scratch?  
+1️⃣4️⃣ How to apply patches and modifications to AOSP?  
+1️⃣5️⃣ What are the essential tools for ROM customization?  
+1️⃣6️⃣ How do I add GApps to a custom ROM?  
+1️⃣7️⃣ How to decompile and edit system APKs?  
+1️⃣8️⃣ How do I extract and modify bootloader images?  
+1️⃣9️⃣ How to integrate vendor blobs into custom ROM development?  
+2️⃣0️⃣ What is the difference between slot A and slot B in Android firmware?  
+2️⃣1️⃣ How to check if a firmware package supports dynamic partitions?  
 
-🔹 **Kernel Tweaking & Device Tree Configuration**
-- How to extract and modify a device tree blob (DTB) or extract vendor blobs?
-- What tools can I use to unpack and repack boot.img?
-- How to add custom kernel features to an Android ROM?
-- How to patch a kernel for a specific device?
-- How to enable root access in a custom ROM build?
-- How do I customize kernel parameters for better performance?
-- How to extract init_boot.img and modify boot parameters?
-- How to troubleshoot boot.img repacking issues?
+⚙️ **Kernel Tweaking & Device Tree Configuration**  
+2️⃣2️⃣ How to extract and modify a device tree blob (DTB)?  
+2️⃣3️⃣ What tools can I use to unpack and repack boot.img?  
+2️⃣4️⃣ How to add custom kernel features to an Android ROM?  
+2️⃣5️⃣ How to patch a kernel for a specific device?  
+2️⃣6️⃣ How to enable root access in a custom ROM build?  
+2️⃣7️⃣ How do I customize kernel parameters for better performance?  
+2️⃣8️⃣ How to extract init_boot.img and modify boot parameters?  
+2️⃣9️⃣ How to troubleshoot boot.img repacking issues?  
+3️⃣0️⃣ What is the role of vendor_dlkm.img in Android firmware?  
 
-🔹 **Advanced Debugging & Reverse Engineering**
-- How to debug boot loops in custom ROMs?
-- What tools can I use for analyzing firmware images?
-- How to identify the partition layout of an Android device?
-- How to perform a deep analysis of system.img using Binwalk?
-- How to unpack and analyze vendor_dlkm.img?
-- How to extract modem firmware from a payload.bin?
-- How do I find the correct offsets for unpacking proprietary partitions?
-- How to manually extract bootloader partitions from a firmware package?
+🛠️ **Advanced Debugging & Reverse Engineering**  
+3️⃣1️⃣ How to debug boot loops in custom ROMs?  
+3️⃣2️⃣ What tools can I use for analyzing firmware images?  
+3️⃣3️⃣ How to identify the partition layout of an Android device?  
+3️⃣4️⃣ How to perform a deep analysis of system.img using Binwalk?  
+3️⃣5️⃣ How to unpack and analyze vendor_dlkm.img?  
+3️⃣6️⃣ How to extract modem firmware from a payload.bin?  
+3️⃣7️⃣ How do I find the correct offsets for unpacking proprietary partitions?  
+3️⃣8️⃣ How to manually extract bootloader partitions from a firmware package?  
+
+🚀 **Android File System Management**  
+3️⃣9️⃣ How to mount EROFS partitions manually?  
+4️⃣0️⃣ What is the difference between ext4, SquashFS, and EROFS in Android?  
+4️⃣1️⃣ How do I extract read-only partitions in Android firmware?  
+4️⃣2️⃣ How to troubleshoot mount failures for extracted firmware images?  
+4️⃣3️⃣ How to recover files from a corrupted Android partition?  
+
+📦 **OTA Firmware Extraction & Payload Dumping**  
+4️⃣4️⃣ How to unpack payload.bin from an Android OTA update?  
+4️⃣5️⃣ How to extract images from super.img using lpunpack?  
+4️⃣6️⃣ How to extract sparse system.img files?  
+4️⃣7️⃣ How do I convert sparse images to raw format for mounting?  
+
+🔍 **Bootloader Unlocking & Security Bypass**  
+4️⃣8️⃣ How to unlock a bootloader for custom ROM installation?  
+4️⃣9️⃣ How do I bypass bootloader restrictions on locked devices?  
+5️⃣0️⃣ What are the security implications of unlocking a bootloader?  
+5️⃣1️⃣ How to extract and modify fastboot partitions?  
+
+📌 **Recovery & Rooting Tools**  
+5️⃣2️⃣ How to install a custom recovery like TWRP?  
+5️⃣3️⃣ How to root an Android device without unlocking the bootloader?  
+5️⃣4️⃣ How to create a Magisk module for Android customization?  
+5️⃣5️⃣ How do I patch a boot.img for root access?  
+
+📢 **Android Debugging & Developer Tools**  
+5️⃣6️⃣ How to use ADB to extract and modify firmware partitions?  
+5️⃣7️⃣ How to troubleshoot fastboot flashing errors?  
+5️⃣8️⃣ How do I capture logs for debugging boot failures?  
+5️⃣9️⃣ What’s the best way to debug SELinux policy issues in Android?  
+
+🌐 **Cross-Device Compatibility**  
+6️⃣0️⃣ How to port a custom ROM to a different Android device?  
+6️⃣1️⃣ What challenges exist when porting ROMs across vendors?  
+6️⃣2️⃣ How to adapt a device tree for different chipset architectures?  
+6️⃣3️⃣ How to extract Qualcomm firmware blobs for custom ROM development?  
+
+🛠️ **ROM Optimization & Battery Performance**  
+6️⃣4️⃣ How do I tweak kernel settings for better battery life?  
+6️⃣5️⃣ How to identify power-consuming services in Android firmware?  
+6️⃣6️⃣ What’s the best way to reduce wake-locks in custom ROMs?  
+
+📜 **Firmware Modification & Repackaging**  
+6️⃣7️⃣ How to repackage boot.img after modifications?  
+6️⃣8️⃣ How to add additional vendor files in an Android ROM build?  
+6️⃣9️⃣ How to adjust partition sizes for custom firmware installation?  
+
+🔹 **Compatibility & System Fixes**  
+7️⃣0️⃣ How do I fix compatibility issues when flashing a ROM?  
+7️⃣1️⃣ How to resolve bootloader mismatches in Android firmware?  
+7️⃣2️⃣ How do I fix system.img mounting errors?  
+7️⃣3️⃣ How to troubleshoot vendor.img extraction failures?  
+
+🚀 **Performance Tuning & Tweaks**  
+7️⃣4️⃣ How to modify kernel parameters for better Android performance?  
+7️⃣5️⃣ How do I tune I/O schedulers for speed optimization?  
+7️⃣6️⃣ How to tweak Android memory management for smoother performance?  
+7️⃣7️⃣ How do I adjust LMK settings for better RAM allocation?  
+
+🔎 **Vendor Blob Extraction & Analysis**  
+7️⃣8️⃣ How do I extract proprietary vendor blobs from stock firmware?  
+7️⃣9️⃣ How to analyze vendor blobs for missing drivers?  
+8️⃣0️⃣ What’s the best way to integrate vendor blobs into AOSP ROMs?  
+
+📦 **ROM Security & Hardening Techniques**  
+8️⃣1️⃣ How to improve SELinux policies for custom ROM security?  
+8️⃣2️⃣ How do I strip unnecessary binaries for lightweight ROM builds?  
+8️⃣3️⃣ How to secure proprietary vendor blobs in custom ROM development?  
+
+📢 **Android Build System & Compilation**  
+8️⃣4️⃣ How to set up an Android build environment?  
+8️⃣5️⃣ How do I compile a custom kernel for an Android device?  
+8️⃣6️⃣ How do I fix missing dependencies in an AOSP build?  
+
+📌 **Troubleshooting & Debugging Firmware Flashing Errors**  
+8️⃣7️⃣ How do I fix fastboot flashing failures?  
+8️⃣8️⃣ How do I troubleshoot OTA update installation errors?  
+8️⃣9️⃣ How to recover a bricked device after failed flashing?  
+
+🔹 **Device-Specific Extraction & Customization**  
+9️⃣0️⃣ How to extract firmware from a Samsung device?  
+9️⃣1️⃣ How to unpack boot.img on a Qualcomm-based phone?  
+9️⃣2️⃣ How to modify a device tree for MediaTek chipsets?  
+
+🔧 **How-To Guides for ROM Developers**  
+9️⃣3️⃣ How to create a minimal GSI (Generic System Image)?  
+9️⃣4️⃣ How do I optimize firmware extraction for low-powered devices?  
+9️⃣5️⃣ How to repack vendor_boot.img with new kernel patches?  
+
+🔥 **Final Optimization Techniques**  
+9️⃣6️⃣ How do I test a custom ROM before flashing it?  
+9️⃣7️⃣ How to verify boot.img integrity before flashing?  
+9️⃣8️⃣ How to optimize an Android build system for faster compilation?  
+9️⃣9️⃣ How to remove unnecessary partitions from a ROM build?  
+1️⃣0️⃣0️⃣ How to generate flashable ZIP files for custom ROM updates?  
 -->
-
-
