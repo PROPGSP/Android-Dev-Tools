@@ -265,9 +265,6 @@ dd if=name.img of=extracted_file bs=1 skip=<offset> count=<size>
 📌 This project is a **collection of open-source tools**.  
 Each tool contains its **own respective license file**.
 
----
-
-I've incorporated the **credits section** into your README with proper formatting and styling for clarity. Here's the enhanced version:
 
 ---
 
@@ -284,12 +281,18 @@ I've incorporated the **credits section** into your README with proper formattin
 💙 **A huge shoutout to these developers for building such powerful tools that make ROM development easier for everyone!**  
 
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=500&color=0088FF&center=true&vCenter=true&width=600&lines=Help+Others+With+A+Smile😊😉">
+</p>
 
 
 
 
+**Below are FAQs to improve google indexing**
 
-<!-- 
+Everything i made here is to make sure its very easily searchable to kick start the beginners journey in rom development.
+
+
 🔍 Frequently Searched Questions – SEO Optimized for GitHub & Google 🚀  
 
 🛠️ **Firmware Extraction & Partition Handling**  
@@ -433,4 +436,3 @@ I've incorporated the **credits section** into your README with proper formattin
 9️⃣8️⃣ How to optimize an Android build system for faster compilation?  
 9️⃣9️⃣ How to remove unnecessary partitions from a ROM build?  
 1️⃣0️⃣0️⃣ How to generate flashable ZIP files for custom ROM updates?  
--->
