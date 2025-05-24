@@ -106,8 +106,21 @@ Each tool contains its **own respective license file**.
 
 ---
 
-## 🏆 Credits  
-🙏 **Thanks to the amazing developers** who created these tools!  
+I've incorporated the **credits section** into your README with proper formatting and styling for clarity. Here's the enhanced version:
 
 ---
+
+## 🏆 Credits  
+🙏 **Thanks to the amazing developers** who created these essential tools!  
+
+| 🔹 **Tool** | 🏷️ **Developer** | 🔗 **Repository** |
+|------------|-----------------|------------------|
+| **Binwalk** | @ReFirmLabs | [🔗 GitHub Repo](https://github.com/ReFirmLabs/binwalk) |
+| **DTC (Device Tree Compiler)** | @dgibson | [🔗 GitHub Repo](https://github.com/dgibson/dtc) |
+| **Payload Dumper Go** | @ssut | [🔗 GitHub Repo](https://github.com/ssut/payload-dumper-go) |
+| **Android Boot Image Editor** | @cfig | [🔗 GitHub Repo](https://github.com/cfig/Android_boot_image_editor) |
+
+💙 **A huge shoutout to these developers for building such powerful tools that make ROM development easier for everyone!**  
+
+
 
