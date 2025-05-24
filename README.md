@@ -1,3 +1,29 @@
+<p align="center">
+  <img src="https://img.shields.io/github/stars/PROPGSP/Android-Dev-Tools?color=FFD700&label=Stars" alt="GitHub stars">
+  <img src="https://img.shields.io/github/forks/PROPGSP/Android-Dev-Tools?color=00BFFF&label=Forks" alt="GitHub forks">
+  <img src="https://img.shields.io/github/watchers/PROPGSP/Android-Dev-Tools?color=32CD32&label=Watchers" alt="GitHub watchers">
+  <img src="https://img.shields.io/github/contributors/PROPGSP/Android-Dev-Tools?color=8A2BE2&label=Contributors" alt="GitHub contributors">
+  <img src="https://img.shields.io/github/license/PROPGSP/Android-Dev-Tools?color=DC143C&label=License" alt="GitHub license">
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=PROPGSP&show_icons=true&theme=tokyonight" alt="GitHub Stats">
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=PROPGSP&theme=tokyonight" alt="GitHub Streak">
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=PROPGSP&layout=compact&theme=tokyonight" alt="Most Used Languages">
+</p>
+
+
+
+
+
+
+
 
 
 # 🔧 Android Dev Tools  
