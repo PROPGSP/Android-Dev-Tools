@@ -1,4 +1,4 @@
-🚀 Android Dev Tools
+🔧 Android Dev Tools 🔧
 
 A collection of powerful tools for made to init the Android ROM development and customization.
 
