@@ -6,17 +6,6 @@
   <img src="https://img.shields.io/github/license/PROPGSP/Android-Dev-Tools?color=DC143C&label=License" alt="GitHub license">
 </p>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=PROPGSP&show_icons=true&theme=tokyonight" alt="GitHub Stats">
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=PROPGSP&theme=tokyonight" alt="GitHub Streak">
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=PROPGSP&layout=compact&theme=tokyonight" alt="Most Used Languages">
-</p>
 
 
 
