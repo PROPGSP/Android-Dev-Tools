@@ -285,3 +285,53 @@ I've incorporated the **credits section** into your README with proper formattin
 
 
 
+<!-- 
+Frequently searched questions related to Android ROM development:
+
+🔹 **Firmware Extraction & Partition Handling**
+- How to extract vendor blobs from Android firmware?
+- How to unpack kernel images from boot.img?
+- How to extract DTB (Device Tree Blob) from Android firmware?
+- How to extract ramdisk from an Android boot.img?
+- How to unpack system and vendor partitions from super.img?
+- Best tools for extracting Android firmware partitions?
+- How to repack boot.img after modification?
+- How to convert sparse images to raw format?
+- How to modify and repackage vendor_boot.img?
+- What is payload.bin, and how to unpack it?
+- How to extract proprietary binaries from an Android update package?
+- How to fix errors while unpacking dynamic partitions?
+
+🔹 **Android ROM Development & Customization**
+- How to build a custom Android ROM from scratch?
+- How to apply patches and modifications to AOSP?
+- What are the essential tools for ROM customization?
+- How do I add GApps to a custom ROM?
+- How to decompile and edit system APKs?
+- How do I extract and modify bootloader images?
+- How to integrate vendor blobs into custom ROM development?
+- What is the difference between slot A and slot B in Android firmware?
+- How to check if a firmware package supports dynamic partitions?
+
+🔹 **Kernel Tweaking & Device Tree Configuration**
+- How to extract and modify a device tree blob (DTB)?
+- What tools can I use to unpack and repack boot.img?
+- How to add custom kernel features to an Android ROM?
+- How to patch a kernel for a specific device?
+- How to enable root access in a custom ROM build?
+- How do I customize kernel parameters for better performance?
+- How to extract init_boot.img and modify boot parameters?
+- How to troubleshoot boot.img repacking issues?
+
+🔹 **Advanced Debugging & Reverse Engineering**
+- How to debug boot loops in custom ROMs?
+- What tools can I use for analyzing firmware images?
+- How to identify the partition layout of an Android device?
+- How to perform a deep analysis of system.img using Binwalk?
+- How to unpack and analyze vendor_dlkm.img?
+- How to extract modem firmware from a payload.bin?
+- How do I find the correct offsets for unpacking proprietary partitions?
+- How to manually extract bootloader partitions from a firmware package?
+-->
+
+
