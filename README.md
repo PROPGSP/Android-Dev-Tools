@@ -7,17 +7,6 @@ Im an Beginner in Android Rom Development.
 I just uploaded the tools that i meet in my learning journey to make sure its easily reachable to new learners.
 
 
-
-📌 
-
-Extract proprietary files from firmware images
-
-Work with vendor blobs for AOSP builds
-
-Automate device tree validation
-
-Optimize ROM development workflows
-
 🔧 Installation
 
 Clone the repository:
