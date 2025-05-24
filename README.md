@@ -103,34 +103,153 @@ Now you have **all images extracted** from the firmware.
 ---
 
 ## 🛠️ Extracting Device Tree, Kernel, and Other Files  
-### 📌 Using **Android_boot_editor** (inside `image-unpack-repack`)
-Before extracting, **check file formats**:  
+
+When extracting **device tree blobs (DTB)**, **kernel files**, and **embedded partitions**, different methods apply based on the image format. Here’s a **step-by-step guide covering all approaches**, including the **manual `dd` method** for stubborn files.
+
+---
+
+### 📌 **Step 1: Install Required Libraries & Tools**  
+Before extracting, install essential tools:  
+```bash
+sudo apt update && sudo apt install -y binwalk simg2img lz4 squashfs-tools mount
+```
+✔️ **Additional Dependencies:**  
+```bash
+pip install protobuf
+```
+🔹 Some extraction tools may require Python dependencies like `protobuf`.
+
+---
+
+### 📌 **Step 2: Identify Image Format**  
+First, check the format of `.img` files:  
 ```bash
 file *.img
 ```
+✔️ If **Erofs**, **SquashFS**, **Ext4**, or another format, use the relevant method below.
 
-✔️ If **Erofs format**, use:  
+---
+
+### 📌 **Step 3: Extracting EROFS Files**  
+For **EROFS-formatted partitions**, use:  
 ```bash
 ./erofsUnpackRust_x64linux system_a.img
 ```
-🚀 You now have unpacked files!  
-Alternatively, **use Binwalk for deep extraction**:  
+🚀 Files will be unpacked.
+
+Alternatively, **mount EROFS manually** on Linux:  
+```bash
+mkdir mount_point  
+sudo mount -t erofs system_a.img mount_point/
+```
+Now browse the extracted files inside `mount_point/`.
+
+---
+
+### 📌 **Step 4: Extracting Generic Files Using Binwalk**  
+If the image contains embedded files (such as kernel or DTB blobs), use **Binwalk** for deep extraction:  
 ```bash
 binwalk -Me name.img
 ```
-🚀 Extracted data is stored inside auto-generated folders.
+🚀 Extracted data is stored inside auto-generated folders.  
 
-✔️ If you want to analyze an image without extracting:  
+✔️ If you only need a **content list**, without extracting:  
 ```bash
 binwalk -Me -r name.img
 ```
 
-⚠️ If the **device tree & kernel files** aren't inside standard partitions, **try:**  
+📌 **Additional Extraction with Binwalk:**  
+If Binwalk does not properly extract the data, use **`dd`** to manually carve out sections based on offsets.
+
+---
+
+### 📌 **Step 5: Extracting Kernel & Device Tree (DTB)**  
+Some devices store **kernel and DTB files** inside `boot.img`, `vendor_boot.img`, or `dtbo.img`.  
+
+#### ✔️ **Using `split_bootimg.pl`**
+Install the tool:  
+```bash
+git clone https://github.com/xblax/bootimg-tools.git  
+cd bootimg-tools  
+chmod +x split_bootimg.pl  
+```
+Extract boot image components:  
+```bash
+./split_bootimg.pl boot.img
+```
+🚀 Generates extracted files such as:  
+- `kernel`  
+- `ramdisk`  
+- `dtb`  
+
+📌 **If DTB is missing, extract manually using `dd`:**  
+```bash
+dd if=boot.img of=dtb.img bs=1 skip=<offset>
+```
+_(Replace `<offset>` with actual DTB location found using Binwalk.)_
+
+---
+
+### 📌 **Step 6: Extracting Android Boot Image Components**  
+For extracting boot partitions (`boot.img`, `vendor_boot.img`, etc.), use **Android Boot Image Editor**:
+
+✔️ Clone and install:  
+```bash
+git clone https://github.com/cfig/Android_boot_image_editor.git  
+cd Android_boot_image_editor  
+chmod +x gradlew  
+```
+🚀 **Unpack boot image:**  
 ```bash
 ./gradlew unpack
 ```
-✔️ You’ll find extracted files inside `image-unpack-repack/build/`.  
-📌 **After extracting each `.img` file, clear the build folder** to prevent issues.
+✔️ Extracted files appear in `image-unpack-repack/build/`.  
+📌 **After extracting each `.img`, clear the build folder** to avoid conflicts.
+
+---
+
+### 📌 **Step 7: Extracting Vendor Blobs**  
+For extracting vendor binary blobs:  
+```bash
+./extract-proprietary-files.sh
+```
+🚀 This copies vendor blobs into the correct AOSP directory.
+
+✔️ **Manually extracting `vendor.img`:**  
+```bash
+simg2img vendor.img vendor.raw.img  
+mkdir vendor_mount  
+sudo mount -o loop vendor.raw.img vendor_mount/
+```
+✔️ You can now browse vendor files inside `vendor_mount/`.
+
+---
+
+### 📌 **Step 8: Manual Extraction Using `dd` (If Nothing Else Works)**  
+When **other methods fail**, manually extract files using `dd`.  
+1️⃣ **Find offsets using Binwalk:**  
+```bash
+binwalk -E name.img
+```
+✔️ This displays embedded file locations.
+
+2️⃣ **Extract data manually:**  
+```bash
+dd if=name.img of=extracted_file bs=1 skip=<offset> count=<size>
+```
+- **`skip=<offset>`** = Starting byte (found using Binwalk).  
+- **`count=<size>`** = Size of the file (estimate based on previous extractions).  
+
+🚀 This method **works when automated extractors fail**!
+
+---
+
+## 🎯 **Final Notes**  
+✔️ Always **check the image format first**.  
+✔️ Use the **appropriate extraction tool** (`Binwalk`, `simg2img`, `dd`, etc.).  
+✔️ If extraction **fails**, **try a combination of multiple methods**.  
+✔️ **Clear build folders** after unpacking to keep things organized.  
+
 
 ---
 
