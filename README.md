@@ -9,13 +9,16 @@
 
 
 
-
-
-
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=500&color=0088FF&center=true&vCenter=true&width=600&lines=Android+Dev+Tools;Firmware+Extraction;ROM+Customization;Kernel+Tweaks">
+</p>
 
 
 
 # 🔧 Android Dev Tools  
+
+
+
 🚀 **A collection of powerful tools designed to kickstart Android ROM development and customization.** 🚀  
 
 **🔹 Beginner-friendly** – As a learner in Android ROM development, I've gathered tools along my journey to make them easily accessible for new developers.
