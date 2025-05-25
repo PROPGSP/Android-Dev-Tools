@@ -282,7 +282,7 @@ Each tool contains its **own respective license file**.
 
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=500&color=0088FF&center=true&vCenter=true&width=600&lines=Help+Others+With+A+Smile😊😉">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=500&color=0088FF&center=true&vCenter=true&width=600&lines=Help+Others+With+A+Smile">
 </p>
 
 
