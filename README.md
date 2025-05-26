@@ -1,21 +1,21 @@
 <p align="center">
-  <img src="https://img.shields.io/github/stars/PROPGSP/Android-Dev-Tools?color=FFD700&label=Stars" alt="GitHub stars">
-  <img src="https://img.shields.io/github/forks/PROPGSP/Android-Dev-Tools?color=00BFFF&label=Forks" alt="GitHub forks">
-  <img src="https://img.shields.io/github/watchers/PROPGSP/Android-Dev-Tools?color=32CD32&label=Watchers" alt="GitHub watchers">
-  <img src="https://img.shields.io/github/contributors/PROPGSP/Android-Dev-Tools?color=8A2BE2&label=Contributors" alt="GitHub contributors">
-  <img src="https://img.shields.io/github/license/PROPGSP/Android-Dev-Tools?color=DC143C&label=License" alt="GitHub license">
+  <img src="https://img.shields.io/github/stars/PROPGSP/Android-Tools?color=FFD700&label=Stars" alt="GitHub stars">
+  <img src="https://img.shields.io/github/forks/PROPGSP/Android-Tools?color=00BFFF&label=Forks" alt="GitHub forks">
+  <img src="https://img.shields.io/github/watchers/PROPGSP/Android-Tools?color=32CD32&label=Watchers" alt="GitHub watchers">
+  <img src="https://img.shields.io/github/contributors/PROPGSP/Android-Tools?color=8A2BE2&label=Contributors" alt="GitHub contributors">
+  <img src="https://img.shields.io/github/license/PROPGSP/Android-Tools?color=DC143C&label=License" alt="GitHub license">
 </p>
 
 
 
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=500&color=0088FF&center=true&vCenter=true&width=600&lines=Android+Dev+Tools;Firmware+Extraction;ROM+Customization;Kernel+Tweaks">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=500&color=0088FF&center=true&vCenter=true&width=600&lines=Android+Tools;Firmware+Extraction;ROM+Customization;Kernel+Tweaks">
 </p>
 
 
 
-# 🔧 Android Dev Tools  
+# 🔧 Android  Tools  
 
 
 
@@ -24,7 +24,7 @@
 **🔹 Beginner-friendly** – As a learner in Android ROM development, I've gathered tools along my journey to make them easily accessible for new developers.
 
 📁 **Get the Files from Releases:**  
-[🔗 Android Dev Tools Release](https://github.com/PROPGSP/Android-Dev-Tools/releases/tag/release)  
+[🔗 Android Dev Tools Release](https://github.com/PROPGSP/Android-Tools/releases/tag/release)  
 
 
 ---
