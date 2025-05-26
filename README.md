@@ -114,6 +114,8 @@ Now you have **all images extracted** from the firmware.
 
 When extracting **device tree blobs (DTB)**, **kernel files**, and **embedded partitions**, different methods apply based on the image format. Here’s a **step-by-step guide covering all approaches**, including the **manual `dd` method** for stubborn files.
 
+**Note:** If you got the expected files from the firmware just skip the steps.
+
 ---
 
 ### 📌 **Step 1: Install Required Libraries & Tools**  
@@ -167,7 +169,7 @@ binwalk -Me -r name.img
 ```
 
 📌 **Additional Extraction with Binwalk:**  
-If Binwalk does not properly extract the data, use **`dd`** to manually carve out sections based on offsets.
+If Binwalk does not properly extract the data, use **`dd`** to manually carve out sections based on offsets as mentioned in Step 8.
 
 ---
 
@@ -175,9 +177,11 @@ If Binwalk does not properly extract the data, use **`dd`** to manually carve ou
 Some devices store **kernel and DTB files** inside `boot.img`, `vendor_boot.img`, or `dtbo.img`.  
 
 #### ✔️ **Using `split_bootimg.pl`**
-Install the tool:  
+Install the tool:
 ```bash
-git clone https://github.com/xblax/bootimg-tools.git  
+git clone https://github.com/xblax/bootimg-tools.git
+```
+
 cd bootimg-tools  
 chmod +x split_bootimg.pl  
 ```
@@ -277,7 +281,7 @@ Each tool contains its **own respective license file**.
 | **DTC (Device Tree Compiler)** | @dgibson | [🔗 GitHub Repo](https://github.com/dgibson/dtc) |
 | **Payload Dumper Go** | @ssut | [🔗 GitHub Repo](https://github.com/ssut/payload-dumper-go) |
 | **Android Boot Image Editor** | @cfig | [🔗 GitHub Repo](https://github.com/cfig/Android_boot_image_editor) |
-
+|**bootimg-tool**| @xblax | [https://github.com/xblax/bootimg-tools] |
 💙 **A huge shoutout to these developers for building such powerful tools that make ROM development easier for everyone!**  
 
 
