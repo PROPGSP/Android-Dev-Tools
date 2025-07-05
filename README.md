@@ -281,7 +281,7 @@ Each tool contains its **own respective license file**.
 | **DTC (Device Tree Compiler)** | @dgibson | [🔗 GitHub Repo](https://github.com/dgibson/dtc) |
 | **Payload Dumper Go** | @ssut | [🔗 GitHub Repo](https://github.com/ssut/payload-dumper-go) |
 | **Android Boot Image Editor** | @cfig | [🔗 GitHub Repo](https://github.com/cfig/Android_boot_image_editor) |
-|**bootimg-tool**| @xblax | [https://github.com/xblax/bootimg-tools] |
+|**bootimg-tool**| @xblax |[🔗 GitHub Repo](https://github.com/xblax/bootimg-tools) |
 💙 **A huge shoutout to these developers for building such powerful tools that make ROM development easier for everyone!**  
 
 
