@@ -10,7 +10,7 @@
 
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=500&color=0088FF&center=true&vCenter=true&width=600&lines=Android+Tools;Firmware+Extraction;ROM+Customization;Kernel+Tweaks">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=2000&pause=500&color=0088FF&center=true&vCenter=true&width=600&lines=Android+Tools;Firmware+Extraction;Firmware+Dumping;ROM+Customization;Kernel+Tweaks">
 </p>
 
 
